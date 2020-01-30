@@ -1,0 +1,17 @@
+---
+title: "Our-rmarkdown"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(here)
+
+our_plot <- ggplot(mtcars, aes(mpg)) + geom_histogram()
+
+here()
+
+ggsave(plot = our_plot, 
+       filename = here("images", "our_plot.png"))
+```
+
